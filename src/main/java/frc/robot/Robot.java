@@ -28,8 +28,8 @@ public class Robot extends TimedRobot {
   @Override
   public void robotInit() {
 
-    serialportkUSB1 = new SerialPort(115200, Port.kUSB1);
-    servo = new Servo(9);
+    serialportkUSB1 = new SerialPort(115200, Port.kUSB1); //kUSB1 is the port towards the inside of the RoboRio
+    servo = new Servo(9); 
     servo.setAngle(90);
   }
 
