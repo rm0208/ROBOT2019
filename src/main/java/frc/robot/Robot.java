@@ -56,7 +56,7 @@ public class Robot extends TimedRobot {
       }
       else if(targetX > 100){
 
-        if(servo.getAngle() > 170){
+        if(servo.getAngle() > 175){
           servo.setAngle(180);
         }else{
           servo.setAngle(servo.getAngle() + 2);
