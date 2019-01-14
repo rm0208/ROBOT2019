@@ -11,6 +11,7 @@ import edu.wpi.first.wpilibj.TimedRobot;
 import edu.wpi.first.wpilibj.SerialPort;
 import edu.wpi.first.wpilibj.SerialPort.Port;
 import edu.wpi.first.wpilibj.Servo;
+import edu.wpi.first.wpilibj.UsbCamera;
 
 /**
  * This is a demo program showing the use of the RobotDrive class, specifically
@@ -24,6 +25,7 @@ public class Robot extends TimedRobot {
   private int targetX;
   private Servo servo;
   private double servoAngle;
+  private UsbCamera camera;
 
   @Override
   public void robotInit() {
@@ -31,6 +33,14 @@ public class Robot extends TimedRobot {
     serialportkUSB1 = new SerialPort(115200, Port.kUSB1); //kUSB1 is the port towards the inside of the RoboRio
     servo = new Servo(9); 
     servo.setAngle(90);
+
+/*  
+    camera = CameraServer.getInstance().startAutomaticCapture(0);
+		camera.setResolution(320, 240); //match JeVois resolution in initscript.cfg
+    camera.setFPS(20); //match JeVois FPS in initscript.cfg
+
+    updateDashboard();
+*/
   }
 
   @Override
